@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Domain.Entities;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Domain.ValueObject
 {
-    public class Address
+    public class Address : Entity
     {
         public Address(int postalCode, string street, string city, string state,int number)
         {
@@ -21,5 +22,10 @@ namespace Domain.ValueObject
         public string State { get;  }
         public int Number { get;  }
 
+        public override void Validate()
+        {
+            CleanValidationMessages(); ;
+            AddCommentary("TODO === VALIDATION");
+        }
     }
 }

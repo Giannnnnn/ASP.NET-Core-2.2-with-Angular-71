@@ -12,5 +12,11 @@ namespace Domain.Entities
         public string Name { get; set; }
         public Double Avaliation { get; set; } 
         public ICollection<Order> Orders { get; set; }
+
+        public override void Validate()
+        {
+            CleanValidationMessages();;
+            AddCommentary("TODO === VALIDATION");
+        }
     }
 }
