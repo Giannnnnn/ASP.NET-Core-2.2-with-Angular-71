@@ -6,7 +6,7 @@ namespace Domain.Entities
 {
     public abstract class Entity
     {
-        public List<string> _validationMessage { get; set; }
+        private List<string> _validationMessage { get; set; }
         private List<string> validationMessage { get { return _validationMessage ?? (_validationMessage = new List<string>()); } }
         public abstract void Validate();
         protected void CleanValidationMessages()

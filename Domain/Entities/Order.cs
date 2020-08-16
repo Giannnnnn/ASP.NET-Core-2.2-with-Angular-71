@@ -10,14 +10,15 @@ namespace Domain.Entities
    public class Order : Entity
     {   
         public Guid ID { get; set; }
-        public DateTime InitialTime { get; }
-        public DateTime DeliverTime { get; }
-        public Guid CostumerID { get; }
+        public DateTime InitialTime { get; set; }
+        public DateTime DeliverTime { get; set; }
+        public Guid UserID { get; set; }
+        public  virtual User User{ get; set; }
         public Address Address { get; set; }
-        public string Status { get; }
-        public int PaymentOptionID{ get; set; }
-        public PaymentOption PaymentOption { get; set; }
-        public ICollection<OrderItem> OrderItems { get; set; }
+        public string Status { get; set; }
+        public  int PaymentOptionID{ get; set; }
+        public virtual PaymentOption PaymentOption { get; set; }
+        public virtual ICollection<OrderItem> OrderItems { get; set; }
 
         public override void Validate()
         {

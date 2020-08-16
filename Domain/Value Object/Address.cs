@@ -16,11 +16,11 @@ namespace Domain.ValueObject
             Number = number;
         }
 
-        public int PostalCode { get;  }
-        public string Street { get;  }
-        public string City { get;  }
-        public string State { get;  }
-        public int Number { get;  }
+        public int PostalCode { get; set; }
+        public string Street { get; set; }
+        public string City { get; set; }
+        public string State { get; set; }
+        public int Number { get; set; }
 
         public override void Validate()
         {

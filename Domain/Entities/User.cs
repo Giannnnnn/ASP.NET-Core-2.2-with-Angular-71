@@ -11,7 +11,7 @@ namespace Domain.Entities
         public string Password { get; set; }
         public string Name { get; set; }
         public Double Avaliation { get; set; } 
-        public ICollection<Order> Orders { get; set; }
+        public virtual ICollection<Order> Orders { get; set; }
 
         public override void Validate()
         {

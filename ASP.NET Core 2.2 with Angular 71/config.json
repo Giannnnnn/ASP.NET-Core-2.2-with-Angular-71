@@ -1,0 +1,8 @@
+{
+  "Key": "ValueKey",
+  {
+    "SqlServerConnection": "",
+    "ConnectionString": "Server=localhost;Uid=root;Pwd=admin;Port=1234;Database=MVCSolution;"
+
+  }
+}
